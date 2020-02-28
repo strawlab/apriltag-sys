@@ -1,0 +1,13 @@
+[package]
+name = "apriltag-sys"
+version = "0.1.0"
+authors = ["Andrew Straw <strawman@astraw.com>"]
+edition = "2018"
+license = "BSD-2-Clause" # same as April Tag source
+
+[dependencies]
+
+[build-dependencies]
+cc = { version = "1.0", features = ["parallel"] }
+glob = "0.3"
+pkg-config = "0.3"

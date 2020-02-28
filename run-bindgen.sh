@@ -1,0 +1,33 @@
+bindgen all.h \
+    --default-enum-style moduleconsts \
+    --with-derive-partialeq \
+    --whitelist-type image_u8 \
+    --whitelist-type apriltag_detector \
+    --whitelist-type zarray_t \
+    --whitelist-type apriltag_family_t \
+    --whitelist-type apriltag_detection_t \
+    --whitelist-function apriltag_detector_add_family_bits \
+    --whitelist-function apriltag_detector_clear_families \
+    --whitelist-function apriltag_detector_detect \
+    --whitelist-function apriltag_detector_create \
+    --whitelist-function apriltag_detector_destroy \
+    --whitelist-function apriltag_detections_destroy \
+    --whitelist-function tag16h5_create \
+    --whitelist-function tag16h5_destroy \
+    --whitelist-function tag25h9_create \
+    --whitelist-function tag25h9_destroy \
+    --whitelist-function tag36h11_create \
+    --whitelist-function tag36h11_destroy \
+    --whitelist-function tagCircle21h7_create \
+    --whitelist-function tagCircle21h7_destroy \
+    --whitelist-function tagCircle49h12_create \
+    --whitelist-function tagCircle49h12_destroy \
+    --whitelist-function tagCustom48h12_create \
+    --whitelist-function tagCustom48h12_destroy \
+    --whitelist-function tagStandard41h12_create \
+    --whitelist-function tagStandard41h12_destroy \
+    --whitelist-function tagStandard52h13_create \
+    --whitelist-function tagStandard52h13_destroy \
+    --distrust-clang-mangling \
+    --raw-line "#![allow(dead_code,non_upper_case_globals,non_camel_case_types,non_snake_case)]" \
+    -o src/lib.rs
